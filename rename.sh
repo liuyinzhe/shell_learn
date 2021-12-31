@@ -3,6 +3,8 @@
 # -_-, 我居然在用C 版本；perl版本的 正则多好用呀...
 
 # C version
+# rename old new *.tsv
+
 rename port prot *.tsv
 
 # perl version
