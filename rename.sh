@@ -1,4 +1,4 @@
-# rename 分C与perl 版本
+# rename 分C与perl版本
 # which rename 然后 less rename 全路径看下，二进制文件就是C 版本
 # -_-, 我居然在用C 版本；perl版本的 正则多好用呀...
 
