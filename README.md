@@ -1,7 +1,7 @@
 # shell_learn
 
 ```bash
-shell_name=$(echo $(basename $0))
+shell_name=$(basename $0)
 # $() 讲返回值转换为字符串
 echo ${shell_name}
 # ${}中间为变量名，可以不带{}，主要应用于变量名与后面内容区分时
