@@ -88,3 +88,5 @@ sed -n '/FM/=' samples.txt
 #N; N是sed的一个处理命令，追加文本流中的下一行到模式空间进行合并处理，因此是换行符可见
 #s/\n/:/; s是sed的替换命令，将换行符替换为冒号
 #b label 或者 t label b / t 是sed的跳转命令，跳转到指定的标签处
+
+#https://blog.csdn.net/dualvencsdn/article/details/120721476
