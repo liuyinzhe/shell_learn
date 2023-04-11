@@ -9,7 +9,7 @@ echo -e "/software/Bin/blastp \\
     -evalue 1e-5 \\
     -max_target_seqs 1 \\
     -max_hsps 1 \\
-    -num_threads 10" >${part}.sh
+    -num_threads 10" >>${part}.sh
 
 done < part_list
 
