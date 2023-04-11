@@ -1,6 +1,7 @@
 # 生成批量脚本
-while read part ;do
 
+while read part ;do
+rm ${part}.sh
 echo -e "/software/Bin/blastp \\
     -query ${PWD}/cas_port.faa.split/cas_port.${part}.faa \\
     -out cas_port.${part}.blast \\
@@ -9,7 +10,7 @@ echo -e "/software/Bin/blastp \\
     -evalue 1e-5 \\
     -max_target_seqs 1 \\
     -max_hsps 1 \\
-    -num_threads 10" >>${part}.sh
+    -num_threads 10" >${part}.sh
 
 done < part_list
 
@@ -19,9 +20,10 @@ done < part_list
 
 
 # 生成批量脚本
+rm batch.sh
 while read part type ;do
 
-echo -e "$type\t$part">>${part}.sh
+echo -e "$type\t$part">>batch.sh
 
 done < part_list
 
