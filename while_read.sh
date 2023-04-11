@@ -16,3 +16,15 @@ done < part_list
 #part_list内容
 ##part_001
 ##part_002
+
+
+# 生成批量脚本
+while read part type ;do
+
+echo -e "$type\t$part">>${part}.sh
+
+done < part_list
+
+#part_list内容
+##part_001  A
+##part_002  B
