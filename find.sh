@@ -23,3 +23,13 @@
 find /var/log -type f -mindepth 1 -maxdepth 4 -iname "*.log" -mtime +7 -exec ls -l {} \;
 
 
+
+# 查找空文件
+find . -name "*" -type f -size 0c
+
+# 查询出所有的空文件夹
+find -type d -empty
+
+# 删除前有提示
+find ./ -name 'qipa250.log' -ok rm -rf {} \;
+
