@@ -36,7 +36,8 @@ find ./ -name 'qipa250.log' -ok rm -rf {} \;
 
 # 排除特定目录(usrA/usrB)
 #find .  -path ./usrA -prune -o  -name "*.stats.txt"
-find .  -path ./usrA -o -path ./usrB -prune -o  -name "*.stats.txt" # |xargs -i gzip {} 
+# 多个目录 # 注释事项 \(\) 两个注释的括号不能与其它字符连接
+find .  \( -path ./usrA -o -path ./usrB \) -prune -o  -name "*.stats.txt" # |xargs -i gzip {} 
 
   #  -o 是or的 或的作用
   #  -prune  表示忽略
