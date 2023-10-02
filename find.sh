@@ -33,3 +33,17 @@ find -type d -empty
 # 删除前有提示
 find ./ -name 'qipa250.log' -ok rm -rf {} \;
 
+
+# 排除特定目录(usrA/usrB)
+#find .  -path ./usrA -prune -o  -name "*.stats.txt"
+find .  -path ./usrA -o -path ./usrB -prune -o  -name "*.stats.txt" # |xargs -i gzip {} 
+
+  #  -o 是or的 或的作用
+  #  -prune  表示忽略
+  #  整体思路，先过滤目录，-prune 后再考虑文件名字
+  
+  #  注意事项：
+  #  1)-prune 必须和 -path， -o 一起使用
+  #  2）-prune -o 的顺序不 能调换
+  #  3）-name等必须放在-prune -o后面才能使用
+  #  eg: find . -path ./a -prune -o -name “*.txt”
