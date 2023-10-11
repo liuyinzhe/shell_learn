@@ -1,3 +1,8 @@
+#!/bin/bash
+set -evx
+
+# date 获取时间戳：自UTC 时间 1970-01-01 00:00:00 以来所经过的秒数
+
 # start
 startTime=`date '+%Y-%m-%d %H:%M:%S'`
 startTime_s=`date +%s`
