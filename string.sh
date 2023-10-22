@@ -13,12 +13,14 @@ echo ${string:4:8}
 # output: efghijkl
 
 # 输出最后一个字符
-echo ${string:-1}
+echo ${string:(-1)}
 # output: z
 
-# 输出输出末尾2个字符
-echo ${string:-2:2}
-# output: yz
+# 输出输出末尾5个字符 
+# echo ${string} | tail -c 6
+echo -n ${string}  | awk  '{print substr($0,length($0)-5)}'
+# -n参数,避免输出隐藏的\n
+# output: uvwxyz
 
 
 ## 2.获取字符串长度 
