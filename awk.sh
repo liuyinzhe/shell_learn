@@ -21,3 +21,10 @@ awk '!a[$0]++' filename #用于去掉重复的行
 #实际上 awk 这里是在判断，因为没写在花括号里；和grep 一个效果
 
 #第二次读到相同的行，a[$0]++返回非0值。
+
+# match 捕获
+#https://www.cnblogs.com/timeisbiggestboss/p/7242351.html
+# cat test 
+# this is chen,and wang,not wan che
+awk '{match($0,/.+is([^,]+).+not(.+)/,a);print a[1],a[2]}' test
+# chen wan
