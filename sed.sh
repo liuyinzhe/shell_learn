@@ -56,6 +56,7 @@ echo  '123\nabc' | sed '/ss/c456'
 
 #输出3~5行
 cat text.txt | sed -n '3,5p'  
+
 #输出匹配到the 的行
 sed -n '/the/p' 1.txt 
 
@@ -75,6 +76,8 @@ sed -n '/FM/=' samples.txt
 
 #https://blog.csdn.net/qq_45905840/article/details/126269071
 
+# 指定行 输出
+# sed -n '1p;2,3p' sample.lst 
 
 # 替换换行符命令
 #sed读取一行时，会先把换行符去掉，处理完后再添加上，所以进行换行符替换时，必须使用sed中的特殊命令。
