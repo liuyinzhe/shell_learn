@@ -33,6 +33,9 @@ df -h | sed '/tmpfs/d'
 #删除第3~5行
 cat text.txt | sed '3,5d'  
 
+# 删除无法匹配到k__Viruses的行
+sed '/k__Viruses/!d' filename
+
 #[3]# i(insert)插入
 #插入在第1行,原第一行向下挪到第二行，以此类推
 echo  '123\nabc' | sed '1i456'
